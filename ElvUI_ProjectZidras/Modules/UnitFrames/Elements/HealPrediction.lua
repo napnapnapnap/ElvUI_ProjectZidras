@@ -14,7 +14,9 @@ end
 function ZUF:SetAlpha_HealComm(obj, alpha)
 	obj.myBar:SetAlpha(alpha)
 	obj.otherBar:SetAlpha(alpha)
-	obj.absorbBar:SetAlpha(alpha)
+	if obj.absorbBar then
+		obj.absorbBar:SetAlpha(alpha)
+	end
 	obj.healAbsorbBar:SetAlpha(alpha)
 end
 
